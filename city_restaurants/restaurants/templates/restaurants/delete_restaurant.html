@@ -1,0 +1,6 @@
+<h2>Delete {{ restaurant.name }}?</h2>
+<form method="post">
+  {% csrf_token %}
+  <button type="submit">Confirm Delete</button>
+</form>
+<a href="/">Cancel</a>

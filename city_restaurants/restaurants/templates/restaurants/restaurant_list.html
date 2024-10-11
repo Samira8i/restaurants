@@ -1,0 +1,16 @@
+<h2>Restaurants List</h2>
+
+<form method="GET" action="{% url 'search_restaurant' %}">
+  <input type="text" name="q" placeholder="Search by specialization" />
+  <button type="submit">Search</button>
+</form>
+
+<ul>
+  {% for restaurant in restaurants %}
+  <li>
+    {{ restaurant.name }} - <a href="{{ restaurant.id }}/edit/">Edit</a> |
+    <a href="{{ restaurant.id }}/delete/">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+<a href="add/">Add a new restaurant</a>

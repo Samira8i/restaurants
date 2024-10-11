@@ -1,0 +1,6 @@
+<h2>Search Results for "{{ query }}"</h2>
+<ul>
+  {% for restaurant in restaurants %}
+  <li>{{ restaurant.name }} - {{ restaurant.specialization }}</li>
+  {% endfor %}
+</ul>
